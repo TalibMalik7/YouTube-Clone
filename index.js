@@ -7,7 +7,7 @@ const container = document.getElementById("container");
     https://youtube.googleapis.com/youtube/v3/search?part=snippet,statistics&maxResults=1&q=mycodeschool&key=AIzaSyBprXFgJkoIn4TkCLOCXd9HLOujKmt9evk
 */
 function searchVideos() {
-  container = `<p>working</p>`;
+  
   let searchValue = searchInput.value;
   // fetch the list of videos for this searchValue
   fetchVideos(searchValue);
@@ -86,12 +86,12 @@ function formattedData(duration) {
 }
   
 function navigateToVideo(videoId){
-  let path = `/youtube-clone/video.html`;
+  let path = `/youtube clone/video.html`;
   if(videoId){
  // video_id: video_id
     document.cookie = `video_id=${videoId}; path=${path}`
     let linkItem = document.createElement("a");
-    linkItem.href = "http://127.0.0.1:3000/youtube clone/video.html"
+    linkItem.href = "./video.html"
     linkItem.target = "_blank" ;
     linkItem.click();
   }
